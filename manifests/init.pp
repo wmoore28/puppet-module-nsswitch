@@ -16,6 +16,8 @@ class nsswitch (
   $sudoers                  = 'USE_DEFAULTS',
   $shadow                   = 'USE_DEFAULTS',
   $group                    = 'USE_DEFAULTS',
+  $passwd_compat            = undef,
+  $shadow_compat            = undef,
   $hosts                    = 'USE_DEFAULTS',
   $automount                = 'USE_DEFAULTS',
   $services                 = 'USE_DEFAULTS',

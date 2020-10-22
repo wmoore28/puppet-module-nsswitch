@@ -4,6 +4,13 @@
 passwd:     <%= @passwd_real %><% if @ensure_ldap == 'present' %> ldap<% end %><% if @ensure_vas == 'present' %> <%= @vas_nss_module_passwd %><% end %>
 shadow:     <%= @shadow_real %><% if @ensure_ldap == 'present' %> ldap<% end %>
 group:      <%= @group_real %><% if @ensure_ldap == 'present' %> ldap<% end %><% if @ensure_vas == 'present' %> <%= @vas_nss_module_group %><% end %>
+<% if @passwd_compat != nil -%>
+
+passwd_compat:     <%= @passwd_compat %>
+<% end -%>
+<% if @shadow_compat != nil -%>
+shadow_compat:     <%= @shadow_compat %>
+<% end -%>
 
 sudoers:    <%= @sudoers_real %><% if @ensure_ldap == 'present' %> ldap<% end %>
 
